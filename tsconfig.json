@@ -1,13 +1,15 @@
 {
 	"compilerOptions": {
 		"module": "esnext",
-		"target": "es6",
+		"target": "es2017",
 		"lib": [
 			"dom",
 			"dom.iterable",
 			"esnext"
 		],
 		"declaration": true,
+        "outDir": "./dist/",
+		"baseUrl": "./src/",
 		
 		"strict": true,
 		"strictPropertyInitialization": true,
@@ -27,9 +29,9 @@
 		]
 	},
 	"include": [
-		"packages",
-		"scripts",
-		"spec"
+		"packages/",
+		"scripts/",
+		"spec/"
 	],
 	"exclude": [
 		"./node_modules/"

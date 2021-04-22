@@ -8,7 +8,7 @@ const config: Config.InitialOptions = {
 		'spec/'
 	],
 	testPathIgnorePatterns : [
-	"ignore/" 
+		'ignore/' 
 	],
 	collectCoverage: true,
 	coverageReporters: [
