@@ -32,7 +32,7 @@
 
 		/* Module Resolution Options */
 		"moduleResolution": "node",
-		"baseUrl": "./",
+		// "baseUrl": "./",
 		/* compiler does not resolve paths lmao */
 		// "paths": {
 		// 	"@components/*": [
