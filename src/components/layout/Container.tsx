@@ -1,18 +1,28 @@
 import React from "react";
 
-import { CommonProps } from '../../lib/Common';
+import { AriaCommon } from "src/lib/a11y";
+import { CommonProps, StagStyle } from '../../lib/Common';
+import { Box } from "../base/Box";
 
-interface Props extends CommonProps {
-	children: React.ReactNode;
-};
+interface ContainerProps extends CommonProps<HTMLDivElement> {
+	centerContent?: boolean;
+}
 
-export const Container = React.forwardRef((props: Props, ref: React.Ref<HTMLDivElement>) => {
-	console.log(props);
-	console.log(ref);
-	
+export const Container = React.forwardRef((props: ContainerProps, ref: React.Ref<HTMLDivElement>) => {
+
+	const style: StagStyle<HTMLSpanElement> = {
+		_css: props.style?._css
+	};
+
+	const aria: AriaCommon = {
+		...props.aria
+	};
+
 	return (
-		<div>
+		<Box ref={ref} {...aria}
+			class='container'
+			style={style}>
 			{props.children}
-		</div>
+		</Box>
 	);
 });
