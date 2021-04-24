@@ -1,15 +1,21 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import { NextPage } from 'next';
+import React from 'react';
 
-import { Container } from 'react-stag';
+import { Container, Span } from 'react-stag';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-	<Container>
-		
-	</Container>
-  </Layout>
-)
+// interface Props { }
+
+const IndexPage: NextPage<never> = () => {
+	return (
+		<div>
+			<Span>
+				I am a span!
+			</Span>
+			<Container aria={{ 'aria-label': 'container' }}>
+				I am a container!
+			</Container>
+		</div>
+	);
+};
 
 export default IndexPage;
