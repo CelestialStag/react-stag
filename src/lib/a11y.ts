@@ -1,4 +1,4 @@
-export interface AriaCommon {
+export type AriaCommon = {
 	'role'?: string;
 	'aria-label'?: string;
 	'aria-labelledby'?: string;

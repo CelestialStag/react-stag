@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { AriaCommon } from "src/lib/a11y";
+import { AriaCommon } from '../../lib';
+import { Box } from '../base/Box';
 import { CommonProps, StagStyle } from '../../lib/Common';
-import { Box } from "../base/Box";
 
-interface ContainerProps extends CommonProps<HTMLDivElement> {
+type ContainerProps = {
 	centerContent?: boolean;
-}
+
+} & CommonProps<HTMLDivElement>;
 
 export const Container = React.forwardRef((props: ContainerProps, ref: React.Ref<HTMLDivElement>) => {
 
@@ -26,3 +27,5 @@ export const Container = React.forwardRef((props: ContainerProps, ref: React.Ref
 		</Box>
 	);
 });
+
+Container.displayName = 'Container';

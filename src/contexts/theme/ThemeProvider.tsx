@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 import { createContext } from 'react';
 
-interface Props { 
+type Props = { 
 	children: React.ReactNode;
 	value: any;
-}
+};
 
 export const ThemeContext = createContext<Props['value']>(null);
 

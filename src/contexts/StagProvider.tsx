@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 import { createContext } from 'react';
 
 import { ThemeProvider } from './theme';
 
-interface Props { 
+type Props = { 
 	children: React.ReactNode;
 	value: any;
-}
+};
 
 export const StagContext = createContext<Props['value']>(null);
 

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { AriaCommon } from "src/lib/a11y";
+import { AriaCommon } from '../../lib';
 import { CommonProps } from '../../lib/Common';
 
-export interface DivProps<T = HTMLDivElement> extends CommonProps<T>  {
+type DivProps<T = HTMLDivElement> = {
 	align?: 'left' | 'right' | 'center';
 	size?: string;
-}
+} & CommonProps<T>;
 
 export const Box = React.forwardRef((props: DivProps, ref: React.Ref<HTMLDivElement>) => {
 	
@@ -26,3 +26,5 @@ export const Box = React.forwardRef((props: DivProps, ref: React.Ref<HTMLDivElem
 		</div>
 	);
 });
+
+Box.displayName = 'Box';

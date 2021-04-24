@@ -2,4 +2,4 @@ export * from './components';
 
 export * from './contexts';
 
-export * from './index'
+export * from './index';

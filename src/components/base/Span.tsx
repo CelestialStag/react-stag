@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { AriaCommon, CommonProps } from '../../lib';
+import { AriaCommon, CommonProps, TextProps } from '../../lib';
 
-interface Props extends CommonProps <HTMLSpanElement> {
-	color: string;
-}
+export type Props = CommonProps<HTMLSpanElement> & TextProps;
 
 export const Span = React.forwardRef((props: Props, ref: React.Ref<HTMLDivElement>) => {
 	
@@ -22,3 +20,5 @@ export const Span = React.forwardRef((props: Props, ref: React.Ref<HTMLDivElemen
 		</span>
 	);
 });
+
+Span.displayName = 'Span';
