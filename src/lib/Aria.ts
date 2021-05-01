@@ -1,9 +1,3 @@
-export type AriaCommon = {
-	'role'?: string;
-	'aria-label'?: string;
-	'aria-labelledby'?: string;
-}
-
 export enum AriaRoles {
 	ALERT = 'alert',
 	APPLICATION = 'application',
@@ -31,6 +25,7 @@ export enum AriaRoles {
 	REGION = 'region',
 	ROW = 'row',
 	ROW_GROUP = 'rowgroup',
+	SECTION = 'section',
 	SEARCH = 'search',
 	SWITCH = 'switch',
 	TAB = 'tab',
@@ -38,4 +33,10 @@ export enum AriaRoles {
 	TEXTBOX = 'textbox',
 	TIMER = 'timer',
 	COMPLI = 'complementary'
+}
+
+export type AriaCommon = {
+	'role'?: AriaRoles;
+	'aria-label'?: string;
+	'aria-labelledby'?: string;
 }

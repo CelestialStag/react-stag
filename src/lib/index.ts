@@ -1,2 +1,3 @@
-export * from './a11y';
+export * from './Aria';
 export * from './Common';
+export * from './StyleConfig';

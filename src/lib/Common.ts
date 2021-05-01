@@ -1,35 +1,41 @@
-import { AriaCommon } from './a11y';
 import React from 'react';
 
+import { AriaCommon } from '.';
+
+/** style for stag 'div' */
 export type SizeProps = {
 	width: string;
-	heigth: string;
-};
+	height: string;
+}; // type SizeProps
 
-export type TextProps = {
+export type FontProps = {
+	/** style for stag 'span' */
 	color?: string;
-	'text-size'?: string;
-};
+	size?: string;
+}; //  type FontProps
 
-export type StagStyle<T> = {
-	_css?: React.StyleHTMLAttributes<T>;
+export type StagThemeProps = {
 	colors?: {
-		'primary'?: string;
-		'secondary'?: string;
-		'tertiary'?: string;
-		'background'?: string;
+		primary?: string;
+		secondary?: string;
+		tertiary?: string;
+		background?: string;
 		'accent-1'?: string;
 		'accent-2'?: string;
 	};
 };
 
-export type CommonActions<T>  = {
+type CommonActions<T>  = {
 	onClick?: (event: React.MouseEvent<T, MouseEvent>) => void;
-};
+}; // type CommonActions
 
-export type CommonProps<T = HTMLDivElement> =  {
+type CommonProps = {
 	children?: React.ReactNode;
 	aria?: AriaCommon;
 	class?: string;
-	style?: StagStyle<T>;
-} & CommonActions<T>;
+	style?: StagThemeProps;
+	_css?: React.CSSProperties;
+}; // type CommonProps
+
+export type StagComponentProps<T = HTMLDivElement> =  {
+} & CommonActions<T> & CommonProps; // type StagComponentProps
