@@ -14,6 +14,8 @@ export type FontProps = {
 	size?: string;
 }; //  type FontProps
 
+export type StyleType = React.CSSProperties | Map<keyof React.CSSProperties, string | number>;
+
 export type StagThemeProps = {
 	colors?: {
 		primary?: string;

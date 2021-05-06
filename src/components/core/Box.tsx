@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { AriaCommon } from '../../lib';
 import { SizeProps, StagComponentProps } from '../../lib/Common';
@@ -15,8 +15,8 @@ const BoxStyle: React.CSSProperties = {
 	flexDirection: 'column'
 };
 
-export const Box = React.forwardRef((props: BoxProps, ref: React.Ref<HTMLDivElement>) => {
-	
+export const Box = (props: BoxProps) => {
+
 	const style: React.CSSProperties = {
 		...BoxStyle,
 		justifyContent: props.align,
@@ -30,11 +30,11 @@ export const Box = React.forwardRef((props: BoxProps, ref: React.Ref<HTMLDivElem
 	};
 
 	return (
-		<div ref={ref} {...aria} style={style}
+		<div  {...aria} style={style}
 			className={props.class ? props.class : ComponentName}>
 			{props.children}
 		</div>
 	);
-});
+};
 
 Box.displayName = ComponentName;

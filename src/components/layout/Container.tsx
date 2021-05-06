@@ -1,18 +1,28 @@
 import React from 'react';
 
 import { AriaCommon } from '../../lib';
-import { Box } from '../base/Box';
-import { CommonProps, StagStyle } from '../../lib/Common';
+import { Box, BoxProps } from '../core/Box';
+
+const ComponentName = 'Container';
 
 type ContainerProps = {
 	centerContent?: boolean;
+} & BoxProps;
 
-} & CommonProps<HTMLDivElement>;
+const ContainerStyle: React.CSSProperties = {
+	display: 'flex',
+	flexDirection: 'column',
+	marginTop: 0,
+	marginBottom: 0,
+	marginLeft: 'auto',
+	marginRight: 'auto'
+};
 
-export const Container = React.forwardRef((props: ContainerProps, ref: React.Ref<HTMLDivElement>) => {
-
-	const style: StagStyle<HTMLSpanElement> = {
-		_css: props.style?._css
+export const Container: React.FC<ContainerProps> = (props: ContainerProps) => {
+	
+	const style: React.CSSProperties = {
+		...ContainerStyle,
+		...props._css
 	};
 
 	const aria: AriaCommon = {
@@ -20,12 +30,10 @@ export const Container = React.forwardRef((props: ContainerProps, ref: React.Ref
 	};
 
 	return (
-		<Box ref={ref} {...aria}
-			class='container'
-			style={style}>
+		<Box {...aria} _css={style} class={'className'}>
 			{props.children}
 		</Box>
 	);
-});
+};
 
-Container.displayName = 'Container';
+Container.displayName = ComponentName;
