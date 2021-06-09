@@ -1,0 +1,61 @@
+{
+	"include": [ "./src/**/*.ts", "./src/**/*.tsx" ],
+	"exclude": [ "./node_modules/", "./dist/" ],
+	"compilerOptions": {
+		/* Basic Options */
+		"target": "esnext",
+		"module": "commonjs",
+		"lib": [  "es6",  "es7", "es2017", "dom", "dom.iterable" ],
+		"allowJs": true,
+		"checkJs": true,
+		"jsx": "react-jsx",
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"outDir": "./dist/",
+		// "noEmit": false,
+		"emitDeclarationOnly": true,
+		// "removeComments": true,
+		"isolatedModules": true,
+
+		/* Strict Type-Checking Options */
+		"strict": true,
+		"noImplicitAny": true,
+
+		/* Additional Checks */
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noPropertyAccessFromIndexSignature": true,
+
+		/* Module Resolution Options */
+		"moduleResolution": "node",
+		// "baseUrl": "./",
+		/* compiler does not resolve paths lmao */
+		// "paths": {
+		// 	"@components/*": [
+		// 		"./src/components/*"
+		// 	],
+		// 	"@contexts/*": [
+		// 		"./src/contexts/*"
+		// 	],
+		// 	"@lib/*": [
+		// 		"./src/lib/*"
+		// 	]
+		// },
+		"types": [ "node" ],
+		// "allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		// "preserveSymlinks": true,
+
+		/* Experimental Options */
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+
+		/* Advanced Options */
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}
