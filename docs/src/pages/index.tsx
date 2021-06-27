@@ -5,7 +5,7 @@ import { Container, Heading } from 'react-stag';
 const IndexPage = () => {
 	return (
 		<Container justify='left'>
-			<Heading size='h1'>
+			<Heading size='h1' >
 				This is a heading (H1)
 			</Heading>
 			<Heading size='h2'>
