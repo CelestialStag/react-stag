@@ -11,8 +11,8 @@
 ![npm](https://img.shields.io/npm/v/react-stag?style=flat-square)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/ottxrgxist/react-stag?include_prereleases)
 [![GitHub issues](https://img.shields.io/github/issues/ottxrgxist/react-stag?style=flat-square)](https://github.com/ottxrgxist/react-stag/issues)
-[![GitHub license](https://img.shields.io/github/license/ottxrgxist/stag?style=flat-square)](https://github.com/ottxrgxist/react-stag/blob/`master/LICENSE)
-`
+[![GitHub license](https://img.shields.io/github/license/ottxrgxist/stag?style=flat-square)](https://github.com/ottxrgxist/react-stag/blob/master/LICENSE)
+
 </div>
 
 ## Getting Started
