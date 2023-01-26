@@ -1,0 +1,51 @@
+{
+  "name": "@examples/web",
+  "private": true,
+  "version": "0.0.1",
+  "description": "shrymp frontend",
+  "author": "Elias Mawa <elias@emawa.io>",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/theluckyegg/react-ssr-koa-monorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theluckyegg/react-ssr-koa-monorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theluckyegg/portfolio/issues"
+  },
+  "scripts": {
+    "lint": "echo 'linting @examples/web' && eslint .",
+    "prettier": "echo 'formatting @examples/web' && yarn prettier  --plugin-search-dir . --write . --check .",
+    "test": "echo 'test @examples/web' && yarn test:unit && yarn test:web",
+    "test:unit": "echo 'test:unit @examples/web' && vitest",
+    "test:web": "echo 'test:web @examples/web' && playwright test",
+    "watch": "ts-node ./src/server.ts",
+    "serve": "echo 'serving @examples/web' && yarn watch",
+    "build": "echo 'building @examples/web' && tsc && vite build",
+    "start": "echo 'starting @examples/web' && cross-env NODE_ENV=production node ./dist/cjs/server.js"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "~1.2.0",
+    "@emotion/react": "~11.10.5",
+    "@emotion/styled": "~11.10.5",
+    "@playwright/test": "^1.28.1",
+    "@stag/react": "workspace:*",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "sirv": "^2.0.2"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "~11.10.5",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^2.0.1",
+    "vite": "^4.0.0",
+    "vite-plugin-ssr": "^0.4.60"
+  }
+}
